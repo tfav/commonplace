@@ -26,6 +26,8 @@
 		1F2158A9186A3136004BB8A6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F215881186A3136004BB8A6 /* CoreData.framework */; };
 		1F2158B1186A3136004BB8A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F2158AF186A3136004BB8A6 /* InfoPlist.strings */; };
 		1F2158B3186A3136004BB8A6 /* CommonplaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F2158B2186A3136004BB8A6 /* CommonplaceTests.m */; };
+		1F2158BE186A436F004BB8A6 /* shadowImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F2158BC186A436F004BB8A6 /* shadowImg@2x.png */; };
+		1F2158BF186A436F004BB8A6 /* shadowImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F2158BD186A436F004BB8A6 /* shadowImg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		1F2158AE186A3136004BB8A6 /* CommonplaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CommonplaceTests-Info.plist"; sourceTree = "<group>"; };
 		1F2158B0186A3136004BB8A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1F2158B2186A3136004BB8A6 /* CommonplaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonplaceTests.m; sourceTree = "<group>"; };
+		1F2158BC186A436F004BB8A6 /* shadowImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shadowImg@2x.png"; path = "../../../../../Desktop/shadowImg@2x.png"; sourceTree = "<group>"; };
+		1F2158BD186A436F004BB8A6 /* shadowImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shadowImg.png; path = ../../../../../Desktop/shadowImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,8 @@
 				1F21589C186A3136004BB8A6 /* tfDetailViewController.m */,
 				1F21589E186A3136004BB8A6 /* Images.xcassets */,
 				1F215895186A3136004BB8A6 /* Commonplace.xcdatamodeld */,
+				1F2158BC186A436F004BB8A6 /* shadowImg@2x.png */,
+				1F2158BD186A436F004BB8A6 /* shadowImg.png */,
 				1F215884186A3136004BB8A6 /* Supporting Files */,
 			);
 			path = Commonplace;
@@ -249,7 +255,9 @@
 				1F215894186A3136004BB8A6 /* Main_iPad.storyboard in Resources */,
 				1F21589F186A3136004BB8A6 /* Images.xcassets in Resources */,
 				1F215891186A3136004BB8A6 /* Main_iPhone.storyboard in Resources */,
+				1F2158BE186A436F004BB8A6 /* shadowImg@2x.png in Resources */,
 				1F215888186A3136004BB8A6 /* InfoPlist.strings in Resources */,
+				1F2158BF186A436F004BB8A6 /* shadowImg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

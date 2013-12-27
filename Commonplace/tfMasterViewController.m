@@ -34,7 +34,21 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (tfDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    // Set Navigation bar color to brown
+    NSArray *ver = [[UIDevice currentDevice].systemVersion componentsSeparatedByString:@"."];
+    if ([[ver objectAtIndex:0] intValue] >= 7) {
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:72/255.0f green:61/255.0f blue:41/255.0f alpha:1];
+        self.navigationController.navigationBar.translucent = NO;
+    } else {
+        self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:72/255.0f green:61/255.0f blue:41/255.0f alpha:1];
+    }
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:177/255.0f green:137/255.0f blue:26/255.0f alpha:1]}];
+    
+
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {

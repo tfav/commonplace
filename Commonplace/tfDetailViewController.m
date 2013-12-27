@@ -44,6 +44,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Attempting to add the small icon next to the back button in detail view.
+    //[[UINavigationBar appearance] setShadowImage:[[UIImage alloc ] init]];
+    [[UINavigationBar appearance]setShadowImage:[UIImage imageNamed:@"shadowImg@2x.png"]];
     [self configureView];
 }
 
