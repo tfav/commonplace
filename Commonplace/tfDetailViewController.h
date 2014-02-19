@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface tfDetailViewController : UIViewController <UISplitViewControllerDelegate>
+@interface tfDetailViewController : UIViewController <UISplitViewControllerDelegate> {
+    IBOutlet UITextView *bodyContent;
+    UITextField *navbarTitle;
+}
 
 @property (strong, nonatomic) id detailItem;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (strong, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end

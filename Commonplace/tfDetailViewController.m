@@ -7,13 +7,16 @@
 //
 
 #import "tfDetailViewController.h"
+#import "aNote.h"
 
 @interface tfDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
+@property (strong, nonatomic) UITextField *textField;
 @end
 
 @implementation tfDetailViewController
+
 
 #pragma mark - Managing the detail item
 
@@ -36,7 +39,17 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        //self.detailDescriptionLabel.text = [[self.detailItem valueForKey:@"timeStamp"] description];
+        aNote *note = (aNote *)self.detailItem;
+        bodyContent.text = note.noteContent;
+        navbarTitle = [[UITextField alloc]initWithFrame:CGRectMake(0,0,200,22)];
+        navbarTitle.text = note.noteTitle;
+        navbarTitle.font = [UIFont boldSystemFontOfSize:19];
+        navbarTitle.textColor = [UIColor colorWithRed:177/255.0f green:137/255.0f blue:26/255.0f alpha:1];
+        navbarTitle.textAlignment = NSTextAlignmentCenter;
+        self.navigationItem.titleView = navbarTitle;
+        note.noteTitle = navbarTitle.text;
+        
     }
 }
 
@@ -47,8 +60,27 @@
     
     //Attempting to add the small icon next to the back button in detail view.
     //[[UINavigationBar appearance] setShadowImage:[[UIImage alloc ] init]];
-    [[UINavigationBar appearance]setShadowImage:[UIImage imageNamed:@"shadowImg@2x.png"]];
+    //[[UINavigationBar appearance]setShadowImage:[UIImage imageNamed:@"shadowImg@2x.png"]];
+    //aNote *note = (aNote *)self.detailItem;
+    
+
+    
+    // self.title = @"Random Title";
+    
+    
     [self configureView];
+}
+- (void)viewDidDisappear:(BOOL)animated
+{
+
+    aNote *note = (aNote *)self.detailItem;
+    note.noteTitle = navbarTitle.text;
+    note.noteContent = bodyContent.text;
+    
+    NSError *error;
+    [[note managedObjectContext] save:&error];
+    
+    [super viewDidDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning
